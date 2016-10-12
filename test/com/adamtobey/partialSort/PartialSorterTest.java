@@ -17,11 +17,12 @@ public class PartialSorterTest {
 
   /**
    * Partially sort an Integer List so that the indices in the resulting list are within 10 indices
-   *  of where they would be finally sorted.
+   *  of where they would be finally sorted. Mutates the given list.
    * @param list the list to partially sort
    * @return the partially sorted List
    */
   private List<Integer> partialIntSort(List<Integer> list) {
+    Collections.sort(list);
     List<Integer> place = new ArrayList<>(list.size());
     Random rand = new Random();
     // not the most efficient algorithm for this...
@@ -30,7 +31,7 @@ public class PartialSorterTest {
       do {
         d = Math.min(Math.max(rand.nextInt(20) - 10, 0), place.size());
       } while (place.get(i + d) != null);
-      place.set(i + d, list.get(i));
+      place.add(i + d, list.get(i));
     }
     return place;
   }
