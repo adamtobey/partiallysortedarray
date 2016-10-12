@@ -2,9 +2,9 @@
 
 ## Problem
 
-Given an array that is partially sorted with the property that every item in the given array is within 10 indices of its location in the final sorted array.
+Given an array that is partially sorted with the property that every item in the given array is within 10 indices of its location in the final sorted array, compute the final sorted order. 
 
-Design an O(n) algorithm to compute this problem.
+Design an O(n) algorithm to solve this problem.
 
 ## Solution
 
